@@ -1,4 +1,5 @@
 Overview
+
 This project is a simple habit tracker application built using Python and SQLite. It allows users to create, track, and manage their habits, with features like adding new habits, checking off habits, and viewing habits by their periodicity (daily or weekly). The application also tracks streaks and the longest streak for each habit, providing users with insights into their consistency.
 
 Features
