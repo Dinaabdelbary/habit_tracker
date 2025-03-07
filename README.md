@@ -26,7 +26,7 @@ Ensure you have Python (3.x recommended) installed on your system.
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/habit-tracker.git
+git clone https://github.com/Dinaabdelbary/habit_tracker.git
 cd habit-tracker
 ```
 
