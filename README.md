@@ -1,102 +1,72 @@
-Overview
+# Habit Tracker
 
-This project is a simple habit tracker application built using Python and SQLite. It allows users to create, track, and manage their habits, with features like adding new habits, checking off habits, and viewing habits by their periodicity (daily or weekly). The application also tracks streaks and the longest streak for each habit, providing users with insights into their consistency.
+## Overview
+The **Habit Tracker** is a Python-based application that helps users track their habits and maintain streaks. It uses an SQLite database to store habit information and allows users to interact with it via a command-line interface (CLI). Additionally, unit tests are included to ensure the correct functionality of habit tracking features.
 
-Features
-Add Habits: Users can add new habits with a name and periodicity (daily or weekly).
+## Features
+- Add new habits with a **daily** or **weekly** periodicity.
+- Display all habits or filter them by periodicity.
+- Check habits to update streaks and longest streaks.
+- Delete habits when no longer needed.
+- Maintain a log of habit checks.
+- Automated unit tests for key functionality.
 
-Check Habits: Users can check off habits, which updates the streak and longest streak.
+## Project Structure
+```
+habit_tracker/
+│── habit_tracker_db.py    # Handles all database operations (CRUD functions)
+│── habit_tracker_cli.py   # Command-line interface for user interaction
+│── test_habit_tracker.py  # Unit tests for the habit tracker
+│── README.md              # Documentation for the project
+```
 
-Edit/Delete Habits: Users can edit or delete existing habits.
+## Installation & Setup
+### Prerequisites
+Ensure you have Python (3.x recommended) installed on your system.
 
-View Habits: Users can view all habits or filter them by periodicity (daily or weekly).
+### Clone the Repository
+```bash
+git clone https://github.com/your-username/habit-tracker.git
+cd habit-tracker
+```
 
-Streak Tracking: The application tracks the current streak and the longest streak for each habit.
+### Install Dependencies
+This project requires SQLite, which comes pre-installed with Python. No additional dependencies are required.
 
-Habit Checks: Each time a habit is checked, the date is recorded in the database.
+## Usage
+### Running the Habit Tracker
+```bash
+python habit_tracker_cli.py
+```
 
-Database Schema
-The application uses an SQLite database with two tables:
+### Command Line Options
+1. **Display habits** – View all recorded habits.
+2. **Add a habit** – Create a new habit (daily or weekly).
+3. **Edit a habit** – Check or delete a habit.
+4. **View daily habits** – Filter and display daily habits.
+5. **View weekly habits** – Filter and display weekly habits.
+6. **Exit** – Quit the application.
 
-habits:
+### Running Unit Tests
+```bash
+python -m unittest test_habit_tracker.py
+```
 
-id: Primary key.
+## Example Usage
+```
+1. Display list
+2. Add habit
+3. Edit habit
+4. Display daily habits
+5. Display weekly habits
+6. Exit
+Enter your choice: 2
+Enter habit name: Exercise
+Enter periodicity (daily/weekly): daily
+Habit added successfully!
+```
 
-name: Name of the habit.
-
-periodicity: Periodicity of the habit (daily or weekly).
-
-streak: Current streak of the habit.
-
-longest_streak: Longest streak achieved for the habit.
-
-last_checked: Date the habit was last checked.
-
-habit_checks:
-
-id: Primary key.
-
-habit_id: Foreign key referencing the habit.
-
-date_checked: Date the habit was checked.
-
-How to Use
-Run the Application:
-
-Execute the script habit_tracker.py to start the application.
-
-The application will prompt you with a menu of options.
-
-Menu Options:
-
-1. Display list: Shows all habits.
-
-2. Add habit: Allows you to add a new habit.
-
-3. Edit habit: Allows you to edit or delete an existing habit.
-
-4. Display daily habits: Shows all habits with a daily periodicity.
-
-5. Display weekly habits: Shows all habits with a weekly periodicity.
-
-6. Exit: Exits the application.
-
-Adding a Habit:
-
-When prompted, enter the name of the habit and its periodicity (daily or weekly).
-
-Checking a Habit:
-
-Use the "Edit habit" option to check off a habit. This will update the streak and longest streak.
-
-Deleting a Habit:
-
-Use the "Edit habit" option to delete a habit.
-
-Testing
-The application includes unit tests to ensure the functionality works as expected. The tests cover:
-
-Adding a habit.
-
-Checking a habit.
-
-Resetting the streak when a habit is broken.
-
-Updating the longest streak.
-
-Displaying habits by periodicity.
-
-Deleting a habit.
-
-To run the tests, execute the script with the following command:
-
-bash
-Copy
-python habit_tracker.py
-The tests will run automatically and display the results in the console.
-
-Dependencies
-Python 3.x
-
-SQLite3 (included with Python standard library)
-
+## Future Enhancements
+- Add a graphical user interface (GUI) for better user experience.
+- Implement notifications/reminders for habit tracking.
+- Provide analytical insights and habit progress reports.
