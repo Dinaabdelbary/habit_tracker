@@ -65,8 +65,3 @@ Enter habit name: Exercise
 Enter periodicity (daily/weekly): daily
 Habit added successfully!
 ```
-
-## Future Enhancements
-- Add a graphical user interface (GUI) for better user experience.
-- Implement notifications/reminders for habit tracking.
-- Provide analytical insights and habit progress reports.
